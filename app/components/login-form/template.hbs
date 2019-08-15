@@ -1,0 +1,20 @@
+<div class="login-title">
+  <p>Sign in to Intranet-App</p>
+</div>
+{{#if error}}
+  <div class="login-error">
+    <span class="login-error__close-message">{{error}}</span>
+    <span class="login-error__close-icon" {{action "closeError"}}>&#10006;</span>
+  </div>
+{{/if}}
+<form class="login-form">
+  <div class="login-form__row">
+    <label class="login-form__label" for="username">Username</label>
+    <Input class="login-form__input" name="username" @type="text" @value={{username}} @autofocus={{true}} @autocomplete={{true}} />
+  </div>
+  <div class="login-form__row">
+    <label class="login-form__label" for="password">Password</label>
+    <Input class="login-form__input" name="password" @type="password" @value={{password}} @autocomplete={{true}} />
+  </div>
+  <Input class="login-form__button" type="submit" @value="Sing in" {{action "sendCredentials"}} />
+</form>

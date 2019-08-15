@@ -1,0 +1,106 @@
+.login-title {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: -.5px;
+  text-align: center;
+}
+
+.login-error {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 340px;
+  padding: 20px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border: 1px solid rgba(27,31,35,.15);
+  font-size: 13px;
+  margin: 0 auto 10px;
+  padding: 16px 20px;
+  background-color: #ffdce0;
+  color: #86181d;
+
+  &__close-icon {
+    cursor: pointer;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 340px;
+  padding: 20px;
+  margin: 0 auto;
+
+  border: 1px solid #d8dee2;
+  border-radius: 4px;
+  background-color: $white;
+  font-size: 14px;
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__label {
+    display: block;
+    margin: 0px 0px 8px;
+    font-weight: 600;
+  }
+
+  &__input {
+    background-color: $white;
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    color: #24292e;
+    font-size: 16px;
+    line-height: 20px;
+    min-height: 32px;
+    outline: none;
+    padding: 4px 8px;
+    vertical-align: middle;
+
+    margin: 8px 0px 16px;
+  }
+
+  &__button {
+    margin: 16px 0px 0px;
+    background-color: $brand_blue;
+    background-image: none;
+    box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,.15);
+    color: $white;
+
+    appearance: none;
+    background-position: -1px -1px;
+    background-repeat: repeat-x;
+    background-size: 110% 110%;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 12px;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  &__button:hover {
+    background-color: $brand_blue;
+    background-image: linear-gradient(-180deg, $gem_blue, $brand_blue 90%);
+    background-position: -.5em;
+    border-color: rgba(27,31,35,.5);
+  }
+}
