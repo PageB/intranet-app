@@ -7,8 +7,8 @@ export default Component.extend({
 
   password: '',
 
-  validateUsername(username) {
-    return username.length >= 8;
+  validateUsername(email) {
+    return email.length >= 8;
   },
 
   validatePassword(password) {
@@ -20,15 +20,15 @@ export default Component.extend({
       this.set('error', '');
     },
     sendCredentials() {
-      const username = this.username;
+      const email = this.email;
       const password = this.password;
-      const isValidUser = this.validateUsername(username)
+      const isValidUser = this.validateUsername(email)
       const isValidPass = this.validatePassword(password)
 
       if (isValidUser && isValidPass) {
-        this.userSingIn(username, password)
+        this.userSingIn(email, password)
       } else {
-        this.set('error', 'Incorrect username or password.')
+        this.set('error', 'Incorrect email or password.')
       }
     }
   }
