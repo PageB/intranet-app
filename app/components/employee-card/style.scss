@@ -1,0 +1,61 @@
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+  margin: 8px;
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+
+    color: $gem_blue;
+    font-weight: bold;
+    margin: 8px 0px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+
+    color: $gem_black;
+    font-size: 12px;
+    font-style: italic;
+    margin: 8px 0px;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+  }
+
+  &__button {
+    border: 1px solid $gem_blue;
+    border-radius: 8px;
+    background: none;
+    color: $gem_blue;
+    font-weight: bold;
+    padding: 8px;
+    margin: 8px;
+    min-width: 80px;
+  }
+
+  &__button:active {
+    border: none;
+  }
+
+  &__text {
+    padding: 0px;
+    margin: 1px 0px;
+  }
+}

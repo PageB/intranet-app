@@ -1,0 +1,34 @@
+{{employee-avatar employee=employee}}
+<div class="employee-card__title">
+  <p class="employee-card__text">{{employee.firstName}}</p>
+  <p class="employee-card__text">{{employee.lastName}}</p>
+</div>
+<div class="employee-card__content">
+  <p class="employee-card__text employee-position">Senior Survey Programmer</p>
+  <p class="employee-card__text">Data Processing</p>
+  <p class="employee-card__text">in company from: {{employee.periodInCompany}}</p>
+  <p class="employee-card__text employee-thought"></p>
+</div>
+<div class="employee-card__actions">
+  <button class="employee-card__button" {{action 'visitEmployee' employee}}>Visit</button>
+</div>
+
+
+
+  {{!-- <p class="employee-card__text">{{employee._id}}</p>
+  <p class="employee-card__text">{{employee.createdAt}}</p>
+  <p class="employee-card__text">{{employee.updatedAt}}</p>
+  <p class="employee-card__text">{{employee.isStarter}}</p>
+  <p class="employee-card__text">{{employee.periodInCompany}}</p>
+  <p class="employee-card__text">{{employee.birthday}}</p>
+  <p class="employee-card__text">{{employee.isBirthday}}</p>
+  <p class="employee-card__text">{{employee.hasBirthday}}</p>
+  <p class="employee-card__text">{{employee.expertise}}</p>
+  <p class="employee-card__text">{{employee.skills}}</p>
+  <p class="employee-card__text">{{employee.languages}}</p>
+  <p class="employee-card__text">{{employee.hobbies}}</p>
+  <p class="employee-card__text">{{employee.song}}</p>
+  <p class="employee-card__text">{{employee.thought}}</p>
+  <p class="employee-card__text">{{employee.book}}</p>
+  <p class="employee-card__text">{{employee.pet}}</p>
+  <p class="employee-card__text">{{employee.skype}}</p> --}}

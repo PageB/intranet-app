@@ -1,8 +1,5 @@
-<p>Home</p>
-
-{{#each model.employees as |employee|}}
-  <p>{{employee.firstName}}</p>
-  <p>{{employee.lastName}}</p>
-  <p>{{employee.email}}</p>
-  <p>{{employee.isAdmin}}</p>
-{{/each}}
+{{#list-component}}
+  {{#each model.employees as |employee|}}
+      {{employee-card employee=employee}}
+  {{/each}}
+{{/list-component}}
