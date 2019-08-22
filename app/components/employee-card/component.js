@@ -6,8 +6,14 @@ export default Component.extend({
   classNames: ['employee-card'],
 
   actions: {
+    /** 
+     * Call route action and navigate to employee.
+     *
+     * @method visitEmployee
+     * @param {Object} employee
+     */
     visitEmployee(employee) {
-      console.log('This button is going to visit: ' + employee);
+      this.visit(employee)
     }
   }
 });

@@ -10,6 +10,10 @@ Router.map(function() {
   this.route('login');
 
   this.route('home', { path: '' });
+
+  this.route('employees', { resetNamespace: true }, function() {
+    this.route('employee', { path: '/:employee_id' });
+  });
 });
 
 export default Router;

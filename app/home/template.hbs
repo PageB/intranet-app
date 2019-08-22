@@ -1,5 +1,5 @@
 {{#list-component}}
   {{#each model.employees as |employee|}}
-      {{employee-card employee=employee}}
+    {{employee-card employee=employee visit=(route-action "visitEmployee")}}
   {{/each}}
 {{/list-component}}

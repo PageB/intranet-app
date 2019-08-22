@@ -1,0 +1,40 @@
+.employee-data {
+  flex: 1;
+  margin: 4px 0px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    background: $gem_gray;
+    padding: 4px;
+    border: 1px solid $gem_gray;
+    border-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &__header-image {
+    max-height: 20px;
+    max-width: 20px;
+    margin-right: 10px;
+  }
+
+  &__header-text {
+    text-transform: capitalize;
+  }
+  
+  &__content {
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+    border: 1px solid $gem_gray;
+    border-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  &__content-value {
+    padding: 0px;
+    margin: 0px;
+  }
+}
