@@ -1,0 +1,48 @@
+<div class="admin-form__rows">
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[0].size}}">{{item.photo}}</div>
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[1].size}}">{{item.firstName}}</div>
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[2].size}}">{{item.lastName}}</div>
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[3].size}}">{{item.team}}</div>
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[4].size}}">
+    <button class="employee-card__button employee-card__visit-button" {{action "showViewForm" employee}}>View</button>
+    <button class="employee-card__button employee-card__update-button" {{action "showEditForm" employee}}>Edit</button>
+    <button class="employee-card__button employee-card__delete-button" {{action "confirmEmployeeDelete" employee}}>Delete</button>
+  </div>
+</div>
+{{#if viewFormIsVisible}}
+  <div class="admin-form__view-form">
+    <div class="admin-form__view-row">
+      <div class="admin-form__view-label">First Name:</div>
+      <div class="admin-form__view-text">{{item.firstName}}</div>
+    </div>
+    <div class="admin-form__view-row">
+      <div class="admin-form__view-label">Last Name:</div>
+      <div class="admin-form__view-text">{{item.lastName}}</div>
+    </div>
+  </div>
+{{/if}}
+{{#if showFormIsVisible}}
+  <div class="admin-form__edit-form">
+    <div class="admin-form__edit-row">
+      <label for="3214" class="admin-form__edit-label">First Name:</label>
+      <input class="admin-form__view-input" id="3214" type="text" value={{item.firstName}} onChange={{action (mut item.firstName) value="target.value"}}>
+    </div>
+    <div class="admin-form__edit-row">
+      <label for="3214" class="admin-form__edit-label">Last Name:</label>
+      <input class="admin-form__view-input" id="3214" type="text" value={{item.lastName}} onChange={{action (mut item.lastName) value="target.value"}}>
+    </div>
+    <div class="admin-form__edit-row">
+      <button class="admin-form__edit-button" {{action "updateEmployee" employee}}>Edit</button>
+    </div>
+  </div>
+{{/if}}
+{{#if showModal}}
+  {{#modal-dialog
+    okBtnText="Delete"
+    cancelBtnText="Cancel"
+    cancel="closeModalDialog"
+    ok=(action 'deleteEmployee' employee)
+    modalTitle="Delete Employee"}}
+    <p>Are you sure that you want to permanently delete this employee</p>
+  {{/modal-dialog}}
+{{/if}}

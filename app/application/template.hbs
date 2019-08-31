@@ -1,3 +1,31 @@
-<main>
-  {{outlet}}
-</main>
+{{#if isAuthenticated}}
+  {{#burger-menu animation="push-rotate" as |burger|}}
+    {{#burger.menu itemTagName="li" as |menu|}}
+      <button {{action burger.state.actions.close}}>Close</button>
+      <ul>
+        {{#menu.item}}
+          {{link-to 'Home' 'home'}}
+        {{/menu.item}}
+
+        {{#menu.item}}
+          {{link-to 'Admin' 'admin'}}
+        {{/menu.item}}
+
+        {{#menu.item}}
+          {{link-to 'Employees' 'employees'}}
+        {{/menu.item}}
+      </ul>
+    {{/burger.menu}}
+
+    {{#burger.outlet}}
+      <header>
+        <button {{action burger.state.actions.toggle}}>Menu</button>
+      </header>
+      <main>
+        {{outlet}}
+      </main>
+    {{/burger.outlet}}
+  {{/burger-menu}}
+{{/if}}
+
+{{notification-container}}

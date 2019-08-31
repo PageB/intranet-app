@@ -11,17 +11,5 @@ export default Route.extend({
     return hash({
       employees: this.store.findAll('employee')
     });
-  },
-  
-  actions: {
-    /**
-     * Navigate to the selected employee.
-     *
-     * @method visitEmployee
-     * @param {Object} employee
-     */
-    visitEmployee(employee) {
-      this.transitionTo('employees.employee', employee.id);
-    }
   }
 });

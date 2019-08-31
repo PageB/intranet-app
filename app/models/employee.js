@@ -209,7 +209,6 @@ export default Model.extend({
   // */
   // company: DS.belongsTo('company'),
 
-
   //  /**
   //    @property hobbyGroups
   //    @type DS.PromiseManyArray

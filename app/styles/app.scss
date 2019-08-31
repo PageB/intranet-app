@@ -2,10 +2,14 @@
 
 body {
   font-family: Helvetica;
+  margin: 0;
+  padding: 0;
 }
 
 main {
-  
+  padding-top: 60px;
 }
 
 @import 'pods';
+@import 'ember-burger-menu';
+

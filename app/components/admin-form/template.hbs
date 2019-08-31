@@ -1,0 +1,8 @@
+<div class="admin-form__headers">
+  {{#each headerOptions as |option|}}
+    <div class="admin-form__cell admin-form__cell_size-{{option.size}}">{{option.name}}</div>
+  {{/each}}
+</div>
+{{#each rowItems as |item|}}
+  {{admin-form-row item=item headerOptions=headerOptions update=(action update item) delete=(action delete item)}}
+{{/each}}

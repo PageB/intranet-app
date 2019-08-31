@@ -12,9 +12,13 @@ export default ApplicationAdapter.extend({
    * @param {Object} query
    * @returns {String} url
    */
-  buildURL(/* modelName, id, snapshot, requestType, query */) {
+  buildURL(modelName, id, snapshot, requestType, query) {
     const organisationId = this.get('session.data.authenticated.user.organisation');
-
-    return `${this.host}/organisations/${organisationId}/employees`
+    
+    if (id) {
+      return `${this.host}/organisations/${organisationId}/employees/${id}`
+    } else {
+      return `${this.host}/organisations/${organisationId}/employees`
+    }
   }
 });
