@@ -1,7 +1,10 @@
 import Route from '@ember/routing/route';
 import { hash } from 'rsvp';
+import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  notifications: service(),
+
   /**
     Fetches all `employee` and 'news' from the store.
 
@@ -12,6 +15,12 @@ export default Route.extend({
     return hash({
       employees: this.store.findAll('employee')
     });
+  },
+
+  afterModel(model) {
+    if (model.employees.length) {
+      this.get('notifications').set('notificationsData', model.employees)
+    }
   },
   
   actions: {

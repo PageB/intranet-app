@@ -1,13 +1,113 @@
 @import 'variables';
 
-body {
-  font-family: Helvetica;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+}
+
+// header
+.burger-menu {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0 0.15em 0.35em 0 rgba(0,0,0,0.13);
+
+  &__menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    // start menu
+    border-bottom: 1px solid $white;
+  }
+
+  &__open-icon:before {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/images/bars.svg');
+    background-size: 28px 28px;
+    height: 28px;
+    width: 28px;
+  }
+
+  &__close-icon:before {
+    display: block;
+    content: ' ';
+    background-image: url('/assets/images/close.svg');
+    background-size: 20px 20px;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__logo {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__notifications {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.bm-menu {
+  background: $brand_blue;
+}
+.bm-menu-item {
+  color: $white;
+  padding: 16px;
+  line-height: 24px;
+  border-bottom: 1px solid $white;
+}
+.bm-menu-item:hover {
+  background: $gem_light_gray;
+  color: $gem_black;
+}
+.bm-menu-item a {
+  display: block;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.bm-menu-item a:hover,
+.bm-menu-item a:focus,
+.bm-menu-item a:active,
+.bm-menu-item a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 main {
-  padding-top: 60px;
+  margin: 0;
+  padding: 0;
 }
 
 @import 'pods';

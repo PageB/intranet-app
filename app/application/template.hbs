@@ -1,7 +1,8 @@
 {{#if isAuthenticated}}
   {{#burger-menu animation="push-rotate" as |burger|}}
-    {{#burger.menu itemTagName="li" as |menu|}}
-      <button {{action burger.state.actions.close}}>Close</button>
+    {{#burger.menu dismissOnItemClick=true itemTagName="li" as |menu|}}
+      <div class="burger-menu__list">
+      </div>
       <ul>
         {{#menu.item}}
           {{link-to 'Home' 'home'}}
@@ -18,8 +19,16 @@
     {{/burger.menu}}
 
     {{#burger.outlet}}
-      <header>
-        <button {{action burger.state.actions.toggle}}>Menu</button>
+      <header class="burger-menu">
+        <div class="burger-menu__menu">
+          <button class="burger-menu__button burger-menu__open-icon" {{action burger.state.actions.toggle}}></button>
+        </div>
+        <div class="burder-menu__logo">
+          <img src="/assets/images/fourth-logo.png" alt="Fourth" style="width: auto; height: 48px">
+        </div>
+        <div class="burger-menu__notifications">
+          {{nav-notification notificationAction=(route-action "visitRoute")}}
+        </div>
       </header>
       <main>
         {{outlet}}
