@@ -9,8 +9,8 @@ export default Component.extend({
 
   notifications: service(),
 
-  models: computed('notifications.notificationsData', function() {
-    return this.get('notifications.notificationsData');
+  models: computed('notifications.employeesWithBirthday', function() {
+    return this.get('notifications.employeesWithBirthday');
   }),
 
   actions: {

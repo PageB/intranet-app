@@ -1,17 +1,26 @@
 import Service from '@ember/service';
+import { computed } from '@ember/object';
 
 /**
-  * Provides a mechanism to get/set the current `organisation` that is being viewed.
-  * Inject service into target route and adapters.
-  @class OrganisationService
+  * Provides a mechanism to get/set of all employees.
+  @class NotificationService
   @extends Ember.Service
   @module Services
 */
 export default Service.extend({
   /**
-   The currently set notification data.
-    @property notificationsData
+    The currently set of all employees.
+    @property allEmployes
     @type {Array}
   */
-  notificationsData: null
+  allEmployes: null,
+
+  /**
+    Store only employees with bithday.
+    @property employeesWithBirthday
+    @type {Array}
+  */
+  employeesWithBirthday: computed('allEmployes', function() {
+    return this.get('allEmployes').filterBy('hasBirthday', true)
+  })
 });
