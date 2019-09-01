@@ -18,7 +18,6 @@ export default Mixin.create({
     @private
   */
   notifyUser(errorMessage, typeOfMessage) {
-    debugger
     this.get('notifications').clearAll();
 
     if (typeOfMessage === "success") {

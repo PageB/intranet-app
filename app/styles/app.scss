@@ -62,6 +62,11 @@ body {
     justify-content: center;
   }
 
+  &__logo-image {
+    width: auto; 
+    height: 48px
+  }
+
   &__notifications {
     flex: 1;
     display: flex;

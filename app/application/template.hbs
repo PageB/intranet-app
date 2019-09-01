@@ -5,15 +5,15 @@
       </div>
       <ul>
         {{#menu.item}}
-          {{link-to 'Home' 'home'}}
+          {{link-to "Home" "home"}}
         {{/menu.item}}
 
         {{#menu.item}}
-          {{link-to 'Admin' 'admin'}}
+          {{link-to "Admin" "admin"}}
         {{/menu.item}}
 
         {{#menu.item}}
-          {{link-to 'Employees' 'employees'}}
+          {{link-to "Employees" "employees"}}
         {{/menu.item}}
       </ul>
     {{/burger.menu}}
@@ -24,7 +24,7 @@
           <button class="burger-menu__button burger-menu__open-icon" {{action burger.state.actions.toggle}}></button>
         </div>
         <div class="burder-menu__logo">
-          <img src="/assets/images/fourth-logo.png" alt="Fourth" style="width: auto; height: 48px">
+          <img class="burder-menu__logo-image" src="/assets/images/fourth-logo.png" alt="Fourth">
         </div>
         <div class="burger-menu__notifications">
           {{nav-notification notificationAction=(route-action "visitRoute")}}

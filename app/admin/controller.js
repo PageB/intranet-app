@@ -7,13 +7,19 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
   
   employee: null,
 
-  headerOptions: [
-    { name: 'Image', size: 's'},
-    { name: 'First name', size: 's'},
-    { name: 'Last name', size: 's'},
-    { name: 'Team', size: 's'},
-    { name: 'Controls', size: 'm'}
-  ],
+  headerOptions: null,
+
+  init() {
+    this._super(...arguments);
+
+    this.set('headerOptions', [
+      { name: 'Image', size: 's'},
+      { name: 'First name', size: 's'},
+      { name: 'Last name', size: 's'},
+      { name: 'Team', size: 's'},
+      { name: 'Controls', size: 'm'}
+    ])
+  },
   
   actions: {
     /**
