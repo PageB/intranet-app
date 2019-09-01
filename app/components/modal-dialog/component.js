@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed } from '@ember/object';
 
 export default Component.extend({
  /**
@@ -7,7 +8,7 @@ export default Component.extend({
    @type String
    @default "OK"
  */
-okBtnText: Ember.computed('', function() {
+okBtnText: computed('', function() {
   return 'OK'
 }),
 
@@ -17,7 +18,7 @@ okBtnText: Ember.computed('', function() {
   @type String
   @default "Cancel"
 */
-cancelBtnText: Ember.computed('', function() {
+cancelBtnText: computed('', function() {
   return 'Cancel'
 }),
 

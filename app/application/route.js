@@ -20,5 +20,19 @@ export default Route.extend({
     const isAuthenticated = this.get('session.isAuthenticated');
 
     this.controllerFor('application').set('isAuthenticated', isAuthenticated);
+  },
+
+
+  actions: {
+    /**
+      Navigate to specific route.
+      TO DO: Add check if model is empty!
+      @method visitRoute
+      @param {Object} model
+      @param {String} route
+    */
+    visitRoute(navToRoute, model) {
+      this.transitionTo(navToRoute, model.get('id'));
+    }
   }
 });

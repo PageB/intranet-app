@@ -1,5 +1,11 @@
 {{#list-component}}
-  {{#each model.employees as |employee|}}
+  {{#each lastEmployees as |employee|}}
+    {{employee-card employee=employee visit=(route-action "visitEmployee")}}
+  {{/each}}
+{{/list-component}}
+
+{{#list-component}}
+  {{#each randomEmployees as |employee|}}
     {{employee-card employee=employee visit=(route-action "visitEmployee")}}
   {{/each}}
 {{/list-component}}
