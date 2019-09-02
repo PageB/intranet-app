@@ -1,0 +1,65 @@
+<div class="admin-form__edit-form">
+  <div class="admin-form__edit-row">
+    <label for="firstName" class="admin-form__edit-label">First Name:</label>
+    <input class="admin-form__view-input" id="firstName" type="text" value={{data.firstName}} onChange={{action (mut data.firstName) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="lastName" class="admin-form__edit-label">Last Name:</label>
+    <input class="admin-form__view-input" id="lastName" type="text" value={{data.lastName}} onChange={{action (mut data.lastName) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="password" class="admin-form__edit-label">Password:</label>
+    <input class="admin-form__view-input" id="password" type="text" value={{data.password}} onChange={{action (mut data.password) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="email" class="admin-form__edit-label">Email:</label>
+    <input class="admin-form__view-input" id="email" type="text" value={{data.email}} onChange={{action (mut data.email) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="birthday" class="admin-form__edit-label">Birthday:</label>
+    <input class="admin-form__view-input" id="birthday" type="text" value={{data.birthday}} onChange={{action (mut data.birthday) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="education" class="admin-form__edit-label">Education:</label>
+    <input class="admin-form__view-input" id="education" type="text" value={{data.education}} onChange={{action (mut data.education) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="expertise" class="admin-form__edit-label">Expertise:</label>
+    <input class="admin-form__view-input" id="expertise" type="text" value={{data.expertise}} onChange={{action (mut data.expertise) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="skills" class="admin-form__edit-label">Skills:</label>
+    <input class="admin-form__view-input" id="skills" type="text" value={{data.skills}} onChange={{action (mut data.skills) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="languages" class="admin-form__edit-label">Languages:</label>
+    <input class="admin-form__view-input" id="languages" type="text" value={{data.languages}} onChange={{action (mut data.languages) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="hobbies" class="admin-form__edit-label">Hobbies:</label>
+    <input class="admin-form__view-input" id="hobbies" type="text" value={{data.hobbies}} onChange={{action (mut data.hobbies) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="song" class="admin-form__edit-label">Song:</label>
+    <input class="admin-form__view-input" id="song" type="text" value={{data.song}} onChange={{action (mut data.song) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="thought" class="admin-form__edit-label">Thought:</label>
+    <input class="admin-form__view-input" id="thought" type="text" value={{data.thought}} onChange={{action (mut data.thought) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="book" class="admin-form__edit-label">Book:</label>
+    <input class="admin-form__view-input" id="book" type="text" value={{data.book}} onChange={{action (mut data.book) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="pet" class="admin-form__edit-label">Pet:</label>
+    <input class="admin-form__view-input" id="pet" type="text" value={{data.pet}} onChange={{action (mut data.pet) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <label for="skype" class="admin-form__edit-label">Skype:</label>
+    <input class="admin-form__view-input" id="skype" type="text" value={{data.skype}} onChange={{action (mut data.skype) value="target.value"}}>
+  </div>
+  <div class="admin-form__edit-row">
+    <button class="admin-form__edit-button" {{action "createEmployee"}}>Create</button>
+  </div>
+</div>

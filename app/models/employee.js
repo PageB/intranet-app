@@ -18,6 +18,12 @@ export default Model.extend({
   lastName: DS.attr('string'),
 
   /**
+    @property password
+    @type String
+  */
+  password: DS.attr('string'),
+
+  /**
     @property createdAt
     @type String
   */
