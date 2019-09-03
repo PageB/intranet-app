@@ -14,6 +14,7 @@ export default Route.extend(NotifyUser, ErrorHandler, {
     const employee = this.store.createRecord('employee', data); 
       employee.save()
       .then(() => {
+        data = {};
         this.notifyUser('Member has been saved successfully', "success");
       })
       .catch((error) => {

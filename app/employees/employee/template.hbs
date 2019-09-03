@@ -1,13 +1,4 @@
-<p class="employee-card__text">{{model.employee._id}}</p>
-<p class="employee-card__text">{{model.employee.firstName}}</p>
-<p class="employee-card__text">{{model.employee.lastName}}</p>
-<p class="employee-card__text">{{model.employee.createdAt}}</p>
-<p class="employee-card__text">{{model.employee.updatedAt}}</p>
-<p class="employee-card__text">{{model.employee.isStarter}}</p>
-<p class="employee-card__text">{{model.employee.periodInCompany}}</p>
-<p class="employee-card__text">{{model.employee.birthday}}</p>
-<p class="employee-card__text">{{model.employee.isBirthday}}</p>
-<p class="employee-card__text">{{model.employee.hasBirthday}}</p>
+<img class="employee-image" src={{model.employee.photo}} alt="{{model.employee.firstName}} {{model.employee.lastName}}">
 
 <div class="employee-details">
   {{employee-data employee=model.employee property="position"}}

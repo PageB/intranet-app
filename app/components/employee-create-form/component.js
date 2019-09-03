@@ -21,8 +21,8 @@ export default Component.extend({
      * @param {Object} data
      */
     createEmployee() {
-      // TODO: Clear all inputs/data
-      // this.hideAllForms();
+      this.get('avatar')
+      console.log(this.get('avatar'))
       this.create(this.get('data'));
     }
   }
