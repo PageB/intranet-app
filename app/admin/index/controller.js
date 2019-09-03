@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
-import NotifyUser from '../mixins/notify-user';
-import ErrorHandler from '../mixins/handle-errors';
+import NotifyUser from '../../mixins/notify-user';
+import ErrorHandler from '../../mixins/handle-errors';
 
 export default Controller.extend(NotifyUser, ErrorHandler, {
   showModal: false,

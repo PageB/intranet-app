@@ -46,18 +46,19 @@
   &__edit-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width: 600px;
     margin: 4px 0px;
   }
 
   &__edit-label {
-    width: 200px;
+    width: 120px;
     text-align: end;
     padding: 0 10px;
   }
   
   &__edit-input {
-    width: 400px;
+    width: 480px;
     text-align: start;
     padding: 0 10px;
   }
@@ -75,5 +76,10 @@
     &_size-m {
       flex: 2;
     }
+  }
+
+  &__cell-image {
+    width: 46px;
+    border-radius: 23px;
   }
 }

@@ -18,7 +18,11 @@ Router.map(function() {
   this.route('articles', { resetNamespace: true }, function() {
     this.route('article', { path: '/:article_id' });
   });
-  this.route('admin');
+
+  this.route('admin', { resetNamespace: true }, function() {
+    this.route('articles');
+    this.route('employees');
+  });
 });
 
 export default Router;

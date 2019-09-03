@@ -1,5 +1,7 @@
 <div class="admin-form__rows">
-  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[0].size}}">{{item.photo}}</div>
+  <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[0].size}}">
+    <img class="admin-form__cell-image" src={{item.image}} alt="{{item.firstName}} {{item.lastName}}">
+  </div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[1].size}}">{{item.firstName}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[2].size}}">{{item.lastName}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[3].size}}">{{item.team}}</div>
