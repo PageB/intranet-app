@@ -29,6 +29,7 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
      * @param {Object} employee
      */
     updateEmployee(employee) {
+      debugger;
       employee.save()
       .then(() => {
         this.notifyUser('The employee has been successfully updated.', "success");

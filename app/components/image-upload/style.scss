@@ -1,6 +1,9 @@
 .image-upload {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
   border: 1px solid #E0E0E0;
-  margin: 5px;
+  margin: 6px 0;
   flex: 1;
 
   &__image-holder {
@@ -13,7 +16,7 @@
   }
 
   &__image-to-upload {
-    max-height: 240px;
+    max-height: 200px;
   }
 
   &__btn {

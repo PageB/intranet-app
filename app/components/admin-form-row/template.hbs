@@ -24,19 +24,7 @@
   </div>
 {{/if}}
 {{#if showFormIsVisible}}
-  <div class="admin-form__edit-form">
-    <div class="admin-form__edit-row">
-      <label for="3214" class="admin-form__edit-label">First Name:</label>
-      <input class="admin-form__view-input" id="3214" type="text" value={{item.firstName}} onChange={{action (mut item.firstName) value="target.value"}}>
-    </div>
-    <div class="admin-form__edit-row">
-      <label for="3214" class="admin-form__edit-label">Last Name:</label>
-      <input class="admin-form__view-input" id="3214" type="text" value={{item.lastName}} onChange={{action (mut item.lastName) value="target.value"}}>
-    </div>
-    <div class="admin-form__edit-row">
-      <button class="admin-form__edit-button" {{action "updateEmployee" employee}}>Edit</button>
-    </div>
-  </div>
+  {{employee-form isCreateForm=false data=item getData=(action update item)}}
 {{/if}}
 {{#if showModal}}
   {{#modal-dialog

@@ -7,10 +7,12 @@
     <label for="lastName" class="admin-form__edit-label">Last Name:</label>
     <input class="admin-form__view-input" id="lastName" type="text" value={{data.lastName}} onChange={{action (mut data.lastName) value="target.value"}}>
   </div>
-  <div class="admin-form__edit-row">
-    <label for="password" class="admin-form__edit-label">Password:</label>
-    <input class="admin-form__view-input" id="password" type="text" value={{data.password}} onChange={{action (mut data.password) value="target.value"}}>
-  </div>
+  {{#if isCreateForm}}
+    <div class="admin-form__edit-row">
+      <label for="password" class="admin-form__edit-label">Password:</label>
+      <input class="admin-form__view-input" id="password" type="text" value={{data.password}} onChange={{action (mut data.password) value="target.value"}}>
+    </div>
+  {{/if}}
   <div class="admin-form__edit-row">
     <label for="email" class="admin-form__edit-label">Email:</label>
     <input class="admin-form__view-input" id="email" type="text" value={{data.email}} onChange={{action (mut data.email) value="target.value"}}>
@@ -66,6 +68,12 @@
   </div>
 
   <div class="admin-form__edit-row">
-    <button class="admin-form__edit-button" {{action "createEmployee"}}>Create</button>
+    <button class="admin-form__edit-button" {{action "sendFormData"}}>
+      {{#if isCreateForm}}
+        Create
+      {{else}}
+        Update
+      {{/if}}
+    </button>
   </div>
 </div>
