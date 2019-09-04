@@ -4,7 +4,7 @@
   justify-content: center;
 
   box-sizing: border-box;
-  margin: 8px;
+  margin: 4px;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
   box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
@@ -17,7 +17,7 @@
 
     color: $gem_blue;
     font-weight: bold;
-    margin: 8px 0px;
+    margin: 4px 0px;
   }
 
   &__content {
@@ -27,9 +27,9 @@
     align-self: center;
 
     color: $gem_black;
-    font-size: 12px;
+    font-size: 11px;
     font-style: italic;
-    margin: 8px 0px;
+    margin: 4px 0px;
   }
 
   &__actions {
@@ -86,6 +86,6 @@
 
   &__text {
     padding: 0px;
-    margin: 1px 0px;
+    text-align: center;
   }
 }
