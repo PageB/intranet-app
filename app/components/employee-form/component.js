@@ -3,14 +3,18 @@ import Component from '@ember/component';
 export default Component.extend({
   tagName: 'div',
 
-  classNames: ['employee-create-form'],
+  classNames: ['admin-form'],
 
   data: null,
+
+  isCreateForm: true,
 
   init() {
     this._super(...arguments);
 
-    this.set('data', {});
+    if (this.data === null) {
+      this.set('data', {})
+    }
   },
 
   actions: {
@@ -20,10 +24,8 @@ export default Component.extend({
      * @method createEmployee
      * @param {Object} data
      */
-    createEmployee() {
-      this.get('avatar')
-      console.log(this.get('avatar'))
-      this.create(this.get('data'));
+    sendFormData() {
+      this.getData(this.get('data'));
     }
   }
 });
