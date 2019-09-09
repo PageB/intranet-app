@@ -1,0 +1,15 @@
+.admin-form {
+  
+  &__rows {
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__rows:nth-child(odd) {
+    background: #f9f9f9;
+  }
+
+  &__rows:hover {
+    background: #f5f5f5;
+  }
+}

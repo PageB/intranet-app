@@ -6,6 +6,9 @@
   &__headers {
     display: flex;
     flex-direction: row;
+    height: 30px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
   }
 
   &__rows {
