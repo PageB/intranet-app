@@ -11,10 +11,10 @@
     <div class="intranetapp-dialog__footer">
       <div class="intranetapp-dialog__actions">
         {{#if showCancelBtn}}
-          <button class="employee-card__button" onclick={{action "cancel"}}>{{cancelBtnText}}</button>
+          {{button-component btnAction=(action "cancel" employee) btnText=cancelBtnText isModal=true}}
         {{/if}}
         {{#if showOKBtn}}
-          <button class="employee-card__button" onclick={{action "ok"}}>{{okBtnText}}</button>
+          {{button-component btnAction=(action "ok" employee) btnText=okBtnText isModal=true}}
         {{/if}}
       </div>
     </div>

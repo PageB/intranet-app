@@ -5,6 +5,7 @@
 
   box-sizing: border-box;
   margin: 4px;
+  padding-bottom: 8px;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
   box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
@@ -37,55 +38,5 @@
     flex-direction: row;
     align-items: center;
     align-self: center;
-  }
-
-  &__button {
-    border: 1px solid $gem_blue;
-    border-radius: 8px;
-    background: none;
-    color: $gem_blue;
-    font-weight: bold;
-    padding: 8px;
-    margin: 8px;
-    min-width: 80px;
-  }
-
-  &__update-button {
-    color: $white;
-    background-color: #ffc107;
-    border: 1px solid #ffc107;
-  }
-
-  &__update-button:hover {
-    color: $black;
-  }
-
-  &__delete-button {
-    color: $white;
-    background-color: #ff5722;
-    border: 1px solid #ff5722;
-  }
-
-  &__delete-button:hover {
-    color: $black;
-  }
-
-  &__visit-button {
-    color: $white;
-    background-color: #A9A9A9;
-    border: 1px solid #A9A9A9;
-  }
-
-  &__visit-button:hover {
-    color: $black;
-  }
-
-  &__button:active {
-    border: none;
-  }
-
-  &__text {
-    padding: 0px;
-    text-align: center;
   }
 }

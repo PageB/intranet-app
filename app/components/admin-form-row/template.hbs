@@ -6,9 +6,9 @@
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[2].size}}">{{item.lastName}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[3].size}}">{{item.team}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[4].size}}">
-    <button class="employee-card__button employee-card__visit-button" {{action "showViewForm" employee}}>View</button>
-    <button class="employee-card__button employee-card__update-button" {{action "showEditForm" employee}}>Edit</button>
-    <button class="employee-card__button employee-card__delete-button" {{action "confirmEmployeeDelete" employee}}>Delete</button>
+    {{button-component btnAction=(action "showViewForm" employee) btnText="View" isView=true}}
+    {{button-component btnAction=(action "showEditForm" employee) btnText="Edit" isEdit=true}}
+    {{button-component btnAction=(action "confirmEmployeeDelete" employee) btnText="Delete" isDelete=true}}
   </div>
 </div>
 {{#if viewFormIsVisible}}
