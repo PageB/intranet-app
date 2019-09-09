@@ -1,0 +1,95 @@
+button {
+  &:disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+}
+
+.btn-default {
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .2);
+  color: $white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  height: 32px;
+  min-width: 82px;
+  outline: none;
+
+  &__text {
+    margin: 16px;
+    text-transform: capitalize;
+  }
+}
+
+.btn-visit {
+  background-color: $white;
+  color: $gem_blue;
+  border: 1px solid $gem_blue;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $gem_blue;
+    color: $white;
+  }
+}
+
+.btn-view {
+  background-color: $status_neutral;
+  color: $white;
+  border: 0;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $status_neutral;
+    color: $black;
+  }
+}
+
+.btn-create {
+  background-color: $status_green;
+  color: $white; 
+  border: 0;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $status_green;
+    color: $black;
+  }
+}
+
+.btn-delete {
+  background-color: $status_orange;
+  color: $white; 
+  border: 0;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $status_orange;
+    color: $black;
+  }
+}
+
+.btn-edit {
+  background-color: $status_yellow;
+  color: $white; 
+  border: 0;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $status_yellow;
+    color: $black;
+  }
+}
+
+.btn-modal {
+  background-color: $white;
+  color: $gem_blue;
+  border: 1px solid $gem_blue;
+  border-radius: 100px;
+
+  &:hover {
+    background-color: $gem_blue;
+    color: $white;
+  }
+}

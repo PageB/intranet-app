@@ -66,14 +66,11 @@
       {{image-upload data=data photoName="photo" updateButton="Update" addButton="Add photo image" uploadMessage="Photo has been loaded."}}
       {{image-upload data=data photoName="image" updateButton="Update" addButton="Add user image" uploadMessage="Image has been loaded."}}
   </div>
-
   <div class="admin-form__edit-row">
-    <button class="admin-form__edit-button" {{action "sendFormData"}}>
       {{#if isCreateForm}}
-        Create
+        {{button-component btnAction=(action "sendFormData") btnText="Create" isCreate=true}}
       {{else}}
-        Update
+        {{button-component btnAction=(action "sendFormData") btnText="Update" isCreate=true}}
       {{/if}}
-    </button>
   </div>
 </div>
