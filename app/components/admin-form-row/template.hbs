@@ -6,24 +6,11 @@
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[2].size}}">{{item.lastName}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[3].size}}">{{item.team}}</div>
   <div class="admin-form__cell admin-form__cell_size-{{headerOptions.[4].size}}">
-    {{button-component btnAction=(action "showViewForm" employee) btnText="View" isView=true}}
     {{button-component btnAction=(action "showEditForm" employee) btnText="Edit" isEdit=true}}
     {{button-component btnAction=(action "confirmEmployeeDelete" employee) btnText="Delete" isDelete=true}}
   </div>
 </div>
-{{#if viewFormIsVisible}}
-  <div class="admin-form__view-form">
-    <div class="admin-form__view-row">
-      <div class="admin-form__view-label">First Name:</div>
-      <div class="admin-form__view-text">{{item.firstName}}</div>
-    </div>
-    <div class="admin-form__view-row">
-      <div class="admin-form__view-label">Last Name:</div>
-      <div class="admin-form__view-text">{{item.lastName}}</div>
-    </div>
-  </div>
-{{/if}}
-{{#if showFormIsVisible}}
+{{#if editFormIsVisible}}
   {{employee-form isCreateForm=false data=item getData=(action update item)}}
 {{/if}}
 {{#if showModal}}

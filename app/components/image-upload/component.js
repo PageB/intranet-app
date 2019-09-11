@@ -5,6 +5,10 @@ export default Component.extend({
 
   classNames: ['image-upload'],
 
+  updateButton: "Update",
+
+  attachButton: "Attach",
+
   actions: {
     /**
       Gather image data and pass it to the update method.

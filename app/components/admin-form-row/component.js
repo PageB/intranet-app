@@ -5,32 +5,20 @@ export default Component.extend({
 
   viewFormIsVisible: false,
 
-  showFormIsVisible: false,
+  editFormIsVisible: false,
 
   hideAllForms() {
-    this.set('viewFormIsVisible', false);
-    this.set('showFormIsVisible', false);
+    this.set('editFormIsVisible', false);
   },
   
   actions: {
     /** 
      * TODO: Call route action and navigate to employee.
      *
-     * @method showViewForm
-     */
-    showViewForm() {
-      this.set('viewFormIsVisible', true);
-      this.set('showFormIsVisible', false);
-    },
-
-    /** 
-     * TODO: Call route action and navigate to employee.
-     *
      * @method showEditForm
      */
     showEditForm() {
-      this.set('viewFormIsVisible', false);
-      this.set('showFormIsVisible', true);
+      this.set('editFormIsVisible', true);
     },
 
     /** 

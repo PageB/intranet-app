@@ -1,16 +1,15 @@
 .employee-data {
-  flex: 1;
-  margin: 4px 0px;
+  display: flex;
+  flex-direction: row;
+  background: #082543;
+  color: $gem_gray;
 
   &__header {
     display: flex;
     flex-direction: row;
-    background: $gem_gray;
-    padding: 4px;
-    border: 1px solid $gem_gray;
-    border-radius: 4px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    justify-content: flex-end;
+    flex: 1;
+    padding: 8px;
   }
 
   &__header-image {
@@ -26,11 +25,9 @@
   &__content {
     display: flex;
     flex-direction: row;
-    padding: 4px;
-    border: 1px solid $gem_gray;
-    border-radius: 4px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    flex: 1;
+    padding: 8px;
+
   }
 
   &__content-value {

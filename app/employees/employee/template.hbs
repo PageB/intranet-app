@@ -1,16 +1,1 @@
-<img class="employee-image" src={{model.employee.photo}} alt="{{model.employee.firstName}} {{model.employee.lastName}}">
-
-<div class="employee-details">
-  {{employee-data employee=model.employee property="position"}}
-  {{employee-data employee=model.employee property="team"}}
-  {{employee-data employee=model.employee property="education"}}
-  {{employee-data employee=model.employee property="expertise"}}
-  {{employee-data employee=model.employee property="skills"}}
-  {{employee-data employee=model.employee property="languages"}}
-  {{employee-data employee=model.employee property="hobbies"}}
-  {{employee-data employee=model.employee property="song"}}
-  {{employee-data employee=model.employee property="book"}}
-  {{employee-data employee=model.employee property="pet"}}
-  {{employee-data employee=model.employee property="thought"}}
-  {{employee-data employee=model.employee property="skype"}}
-</div>
+{{employee-detailed-card employee=model.employee}}
