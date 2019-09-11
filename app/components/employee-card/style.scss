@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  min-width: 180px;
+  max-width: 180px;
   box-sizing: border-box;
-  margin: 4px;
+  margin: 6px;
   padding-bottom: 8px;
   -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.5);
@@ -18,7 +19,11 @@
 
     color: $gem_blue;
     font-weight: bold;
-    margin: 4px 0px;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    text-align: center;
   }
 
   &__content {
@@ -29,8 +34,7 @@
 
     color: $gem_black;
     font-size: 11px;
-    font-style: italic;
-    margin: 4px 0px;
+    margin-bottom: 8px;
   }
 
   &__actions {

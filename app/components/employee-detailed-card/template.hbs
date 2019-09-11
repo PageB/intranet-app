@@ -1,0 +1,18 @@
+<div class="employee-detailed-card__photo">
+  <img class="employee-detailed-card__image" src={{employee.photo}} alt="{{employee.firstName}} {{employee.lastName}}">
+  <p class="employee-detailed-card__thought">"{{employee.thought}}"</p>
+</div>
+<div class="employee-detailed-card__details">
+  <p class="employee-detailed-card__name">{{employee.firstName}} {{employee.lastName}}</p>
+  {{employee-data employee=employee property="position"}}
+  {{employee-data employee=employee property="team"}}
+  {{employee-data employee=employee property="education"}}
+  {{employee-data employee=employee property="expertise"}}
+  {{employee-data employee=employee property="skills"}}
+  {{employee-data employee=employee property="languages"}}
+  {{employee-data employee=employee property="hobbies"}}
+  {{employee-data employee=employee property="song"}}
+  {{employee-data employee=employee property="book"}}
+  {{employee-data employee=employee property="pet"}}
+  {{employee-data employee=employee property="skype"}}
+</div>

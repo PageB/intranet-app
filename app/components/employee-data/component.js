@@ -10,7 +10,7 @@ export default Component.extend({
 
   propertyTitle: computed('property', function() {
     const titles = {
-      song: 'A song for good mood',
+      song: 'A favorite song',
       book: 'A favorite book',
       thought: 'A thought for inspiration'
     };

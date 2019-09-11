@@ -62,15 +62,15 @@
     <input class="admin-form__view-input" id="skype" type="text" value={{data.skype}} onChange={{action (mut data.skype) value="target.value"}}>
   </div>
   <div class="admin-form__edit-row">
-      {{image-upload data=data photoName="avatar" updateButton="Update" addButton="Add avatar image" uploadMessage="Avatar has been loaded."}}
-      {{image-upload data=data photoName="photo" updateButton="Update" addButton="Add photo image" uploadMessage="Photo has been loaded."}}
-      {{image-upload data=data photoName="image" updateButton="Update" addButton="Add user image" uploadMessage="Image has been loaded."}}
+    {{image-upload data=data photoName="avatar"}}
+    {{image-upload data=data photoName="photo"}}
+    {{image-upload data=data photoName="image"}}
   </div>
   <div class="admin-form__edit-row">
-      {{#if isCreateForm}}
-        {{button-component btnAction=(action "sendFormData") btnText="Create" isCreate=true}}
-      {{else}}
-        {{button-component btnAction=(action "sendFormData") btnText="Update" isCreate=true}}
-      {{/if}}
+    {{#if isCreateForm}}
+      {{button-component btnAction=(action "sendFormData") btnText="Create" isCreate=true}}
+    {{else}}
+      {{button-component btnAction=(action "sendFormData") btnText="Update" isCreate=true}}
+    {{/if}}
   </div>
 </div>
