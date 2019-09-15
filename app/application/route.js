@@ -14,15 +14,6 @@ export default Route.extend({
     }
   },
 
-  setupController(controller, model) {
-    this._super(controller, model);
-
-    const isAuthenticated = this.get('session.isAuthenticated');
-
-    this.controllerFor('application').set('isAuthenticated', isAuthenticated);
-  },
-
-
   actions: {
     /**
       Navigate to specific route.

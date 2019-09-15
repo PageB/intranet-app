@@ -6,6 +6,7 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    host: 'http://localhost:3000',
     'ember-simple-auth-token': {
       serverTokenEndpoint: 'http://localhost:3000/users/login', // Server endpoint to send authenticate request
       tokenPropertyName: 'token', // Key in server response that contains the access token
@@ -52,6 +53,10 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.host = 'https://intranet-app-api.herokuapp.com';
+    ENV['ember-simple-auth-token'] = {
+      serverTokenEndpoint: 'https://intranet-app-api.herokuapp.com/users/login'
+    };
   }
 
   return ENV;

@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
 import { inject } from '@ember/service';
+import NotifyUser from '../mixins/notify-user';
 
-export default Controller.extend({
+export default Controller.extend(NotifyUser, {
   singInError: '',
 
   session: inject('session'),
@@ -15,6 +16,7 @@ export default Controller.extend({
       const authenticator = 'authenticator:token';
 
       this.get('session').authenticate(authenticator, credentials).then(() => {
+        this.notifyUser('Successfully login', "success");
         this.send('onSuccesRedirectUser');
       }).catch(() => {
         this.set('singInError', 'Incorrect email or password.');

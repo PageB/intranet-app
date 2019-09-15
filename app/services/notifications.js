@@ -13,7 +13,13 @@ export default Service.extend({
     @property allEmployes
     @type {Array}
   */
-  allEmployes: null,
+  allEmployes: null, 
+
+  init() {
+    this._super(...arguments);
+
+    this.allEmployes = [];
+  },
 
   /**
     Store only employees with bithday.
