@@ -6,9 +6,11 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    host: 'http://localhost:3000',
+    // host: 'http://localhost:3000',
+    host: 'https://intranet-app-api.herokuapp.com',
     'ember-simple-auth-token': {
-      serverTokenEndpoint: 'http://localhost:3000/users/login', // Server endpoint to send authenticate request
+      // serverTokenEndpoint: 'http://localhost:3000/users/login', // Server endpoint to send authenticate request
+      serverTokenEndpoint: 'https://intranet-app-api.herokuapp.com/users/login',
       tokenPropertyName: 'token', // Key in server response that contains the access token
       authorizationHeaderName: 'Authorization', // Header name added to each API request
       authorizationPrefix: 'Bearer ', // Prefix added to each API request
