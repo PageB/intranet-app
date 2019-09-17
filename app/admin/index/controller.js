@@ -1,10 +1,19 @@
 import Controller from '@ember/controller';
 import NotifyUser from '../../mixins/notify-user';
 import ErrorHandler from '../../mixins/handle-errors';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend(NotifyUser, ErrorHandler, {
+  /**
+   * Handling spinner status
+   *
+   * @property spinnerService
+   * @public
+   */
+  spinnerService: service(),
+
   showModal: false,
-  
+
   employee: null,
 
   headerOptions: null,
@@ -20,7 +29,7 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
       { name: 'Controls', size: 'm'}
     ])
   },
-  
+
   actions: {
     /**
      * TODO: Navigate to the selected employee.
@@ -29,7 +38,8 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
      * @param {Object} employee
      */
     updateEmployee(employee) {
-      debugger;
+      this.get('spinnerService').showSpinner();
+
       employee.save()
       .then(() => {
         this.notifyUser('The employee has been successfully updated.', "success");
@@ -38,6 +48,9 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
       .catch((error) => {
         this.handleErrors(error);
         this.set('employee', null);
+      })
+      .finally(() => {
+        this.get('spinnerService').hideSpinner();
       });
     },
 
@@ -48,6 +61,8 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
      * @param {Object} employee
      */
     deleteEmployee(employee) {
+      this.get('spinnerService').showModal();
+
       employee.deleteRecord();
       employee.save()
       .then(() => {
@@ -57,6 +72,9 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
       .catch((error) => {
         this.handleErrors(error);
         this.set('employee', null);
+      })
+      .finally(() => {
+        this.get('spinnerService').hideModal();
       });
     }
   }

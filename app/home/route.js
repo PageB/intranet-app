@@ -6,6 +6,14 @@ export default Route.extend({
   notifications: service(),
 
   /**
+   * Handling spinner status
+   *
+   * @property spinnerService
+   * @public
+   */
+  spinnerService: service(),
+
+  /**
     Fetches all `employee` and 'news' from the store.
 
     @method model
@@ -87,7 +95,7 @@ export default Route.extend({
   */
   _shuffleArray(array) {
   var m = array.length, t, i;
-  
+
     while (m) {
       i = Math.floor(Math.random() * m--);
       t = array[m];

@@ -11,14 +11,13 @@ export default Route.extend(NotifyUser, ErrorHandler, {
       @return {DS.PromiseManyArray}
     */
     createEmployee(data) {
-    const employee = this.store.createRecord('employee', data); 
+    const employee = this.store.createRecord('employee', data);
       employee.save()
       .then(() => {
         data = {};
         this.notifyUser('Member has been saved successfully', "success");
       })
       .catch((error) => {
-        console.log(error)
         this.handleErrors(error);
       });
     }

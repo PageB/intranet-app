@@ -18,7 +18,6 @@ export default Component.extend({
       @param {Object} file
     */
    uploadPhoto (imgName, file) {
-     console.log(file);
       file.readAsDataURL().then(url => {
         this.set(`data.${imgName}`, url);
       });
