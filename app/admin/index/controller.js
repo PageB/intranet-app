@@ -50,7 +50,7 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
         this.set('employee', null);
       })
       .finally(() => {
-        // this.get('spinnerService').hideSpinner();
+        this.get('spinnerService').hideSpinner();
       });
     },
 
