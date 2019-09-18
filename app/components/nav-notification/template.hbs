@@ -9,10 +9,11 @@
                       showOn="click"}}
       {{#each models as |model|}}
         {{#if model.hasBirthday}}
-          <div class="nav-notification__attacher" onClick={{action "navigateToRoute" navToRoute model}}>
+          <div class="nav-notification__attacher" onClick={{action "navigateToRoute" model}}>
             <img class="nav-notification__attacher-photo" src={{model.image}} alt="{{model.firstName}} {{model.lastName}}">
             <div class="nav-notification__attacher-text">
-              <span class="nav-notification__attacher-text-name">{{model.firstName}} {{model.lastName}}</span><br>
+              <img class="nav-notification__attacher-image" src="/assets/images/spinner.gif" alt="Birthday">
+              <span class="nav-notification__attacher-text-name">{{model.firstName}} {{model.lastName}}</span>
             </div>
           </div>
         {{/if}}
