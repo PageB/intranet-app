@@ -21,8 +21,8 @@ export default Component.extend({
      * @param model
      * @param route
      */
-    navigateToRoute(navToRoute, model) {
-      this.get('notificationAction')(navToRoute, model);
+    navigateToRoute(model) {
+      this.get('notificationAction')('employees.employee', model);
     }
   }
 });

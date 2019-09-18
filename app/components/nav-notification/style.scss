@@ -19,14 +19,14 @@
     right: 0;
     margin: 0 auto;
   }
-  
+
   &__counter {
     height: 14px;
     width: 14px;
     font-size: 10px;
     font-weight: bold;
     background-color: $brand_blue;
-    color: white;
+    color: $white;
     border-radius: 8px;
     position: absolute;
     top: 70%;
@@ -35,9 +35,16 @@
   }
 
   &__popper {
-    background-color: lightgray;
-    padding: 5px;
+    background-color: $white;
+    color: $gem_black;
+    padding: 6px;
     cursor: pointer;
+    border: 1px solid $lightgrey;
+    border-radius: 8px;
+  }
+
+  &__popper:hover {
+    background-color: $gainsboro;
   }
 
   &__attacher {
@@ -56,6 +63,9 @@
   }
 
   &__attacher-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 230px;
     min-width: 200px;
     text-align: center;
@@ -64,5 +74,10 @@
   &__attacher-text-date {
     font-size: 12px;
     font-style: italic;
+  }
+
+  &__attacher-image {
+    width: 28px;
+    align-self: center;
   }
 }
