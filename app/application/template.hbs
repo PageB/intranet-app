@@ -19,6 +19,10 @@
         {{#menu.item}}
           {{link-to "Create Employees" "admin.employees"}}
         {{/menu.item}}
+
+        {{#menu.item}}
+          <button class="menu-item__link" {{action "signOut"}}>Sign out</button>
+        {{/menu.item}}
       </ul>
     {{/burger.menu}}
 

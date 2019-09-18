@@ -124,6 +124,19 @@ main {
   padding: 0;
 }
 
+.menu-item {
+  &__link {
+    padding: 16px;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+  }
+}
+
 @import 'pods';
 @import 'ember-burger-menu';
 
