@@ -17,13 +17,23 @@ export default Route.extend({
   actions: {
     /**
       Navigate to specific route.
-      TO DO: Add check if model is empty!
+      TODO: Add check if model is empty!
       @method visitRoute
       @param {Object} model
       @param {String} route
     */
     visitRoute(navToRoute, model) {
       this.transitionTo(navToRoute, model.get('id'));
+    },
+
+    /**
+      Sign out user.
+      @method signOut
+    */
+    signOut() {
+      // TODO: API call for signout.
+      this.get('session').invalidate();
+      this.refresh();
     }
   }
 });
