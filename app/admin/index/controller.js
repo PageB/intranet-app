@@ -5,19 +5,25 @@ import { inject as service } from '@ember/service';
 
 export default Controller.extend(NotifyUser, ErrorHandler, {
   /**
-   * Handling spinner status
+   * Spinner service injection.
    *
    * @property spinnerService
    * @public
    */
   spinnerService: service(),
 
-  showModal: false,
-
-  employee: null,
-
+  /**
+   * Store admin-form component headers configuration.
+   *
+   * @property headerOptions
+   */
   headerOptions: null,
 
+  /**
+   * Init controller hook
+   *
+   * @method init
+   */
   init() {
     this._super(...arguments);
 
@@ -32,7 +38,8 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
 
   actions: {
     /**
-     * TODO: Navigate to the selected employee.
+     * Validate user for changes to popup the correct toast message.
+     * anbd if user hasDirtyAttributes save it to the API.
      *
      * @method updateEmployee
      * @param {Object} employee
@@ -58,7 +65,7 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
     },
 
     /**
-     * TODO: Navigate to the selected employee.
+     * Delete employee record.
      *
      * @method deleteEmployee
      * @param {Object} employee

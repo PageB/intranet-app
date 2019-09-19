@@ -7,8 +7,18 @@ export default Component.extend({
 
   classNames: ['nav-notification'],
 
+  /**
+   * Notifications service injection.
+   *
+   * @property session
+   */
   notifications: service(),
 
+  /**
+   * Load models with bithday.
+   *
+   * @property models
+   */
   models: computed('notifications.employeesWithBirthday', function() {
     return this.get('notifications.employeesWithBirthday');
   }),

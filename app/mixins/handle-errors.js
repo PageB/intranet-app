@@ -2,6 +2,12 @@ import Mixin from '@ember/object/mixin';
 import NotifyUser from '../mixins/notify-user';
 
 export default Mixin.create(NotifyUser, {
+  /**
+   * Handle and process error, show toast message.
+   *
+   * @method handleErrors
+   * @param {Object} error
+   */
   handleErrors: function (error) {
     if (error) {
       error.errors.forEach((error)=> {

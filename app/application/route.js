@@ -2,8 +2,18 @@ import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
 export default Route.extend({
+  /**
+   * Session service injection.
+   *
+   * @property session
+   */
   session: service(),
 
+ /**
+  * Router afterModel hook.
+  * @method afterModel
+  * @method afterModel
+  */
   afterModel() {
     const isAuthenticated = this.get('session.isAuthenticated');
 
@@ -15,20 +25,19 @@ export default Route.extend({
   },
 
   actions: {
-    /**
-      Navigate to specific route.
-      TODO: Add check if model is empty!
-      @method visitRoute
-      @param {Object} model
-      @param {String} route
+   /**
+    * Navigate to specific route.
+    * @method visitRoute
+    * @param {Object} model
+    * @param {String} route
     */
     visitRoute(navToRoute, model) {
       this.transitionTo(navToRoute, model.get('id'));
     },
 
-    /**
-      Sign out user.
-      @method signOut
+   /**
+    * Sign out user.
+    * @method signOut
     */
     signOut() {
       // TODO: API call for signout.

@@ -5,10 +5,18 @@ export default Component.extend({
 
   classNames: ['admin-form'],
 
-  // TODO: Add doc block.
+  /**
+   * Store employee data entered in the form.
+   *
+   * @property data
+   */
   data: null,
 
-  // TODO: Add doc block.
+  /**
+   * Create from property.
+   *
+   * @property isCreateForm
+   */
   isCreateForm: true,
 
   /**
@@ -26,10 +34,9 @@ export default Component.extend({
 
   actions: {
     /**
-     * TODO: Call route action and navigate to employee.
+     * Create employee closure action.
      *
-     * @method createEmployee
-     * @param {Object} data
+     * @method sendFormData
      */
     sendFormData() {
       this.getData(this.get('data'));

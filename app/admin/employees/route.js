@@ -4,11 +4,11 @@ import ErrorHandler from '../../mixins/handle-errors';
 
 export default Route.extend(NotifyUser, ErrorHandler, {
   actions: {
-    /**
-      Create and save employee to the API.
-      @method createEmployee
-      @param {Object} employee
-      @return {DS.PromiseManyArray}
+   /**
+    * Create and save employee to the API.
+    * @method createEmployee
+    * @param {Object} employee
+    * @return {DS.PromiseManyArray}
     */
     createEmployee(data) {
     const employee = this.store.createRecord('employee', data);

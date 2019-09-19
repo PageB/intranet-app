@@ -3,11 +3,28 @@ import { inject } from '@ember/service';
 import NotifyUser from '../mixins/notify-user';
 
 export default Controller.extend(NotifyUser, {
-  singInError: '',
-
+  /**
+   * Session service injection.
+   *
+   * @property session
+   */
   session: inject('session'),
 
+  /**
+   * Default error message.
+   *
+   * @property singInError
+   */
+  singInError: '',
+
   actions: {
+    /**
+     * Sing in user.
+     *
+     * @method userSingIn
+     * @param {String} email
+     * @param {String} password
+     */
     userSingIn(email, password) {
       this.set('email', email);
       this.set('password', password);

@@ -10,12 +10,13 @@ export default Mixin.create({
    */
   notifications: service('notification-messages'),
 
-  /**
-   Notifies the user.
-    @method notifyUser
-    @param {String} errorMessage
-    @param {String} typeOfMessage
-    @private
+ /**
+  * Notifies the user.
+  *
+  * @method notifyUser
+  * @param {String} errorMessage
+  * @param {String} typeOfMessage
+  * @private
   */
   notifyUser(errorMessage, typeOfMessage) {
     this.get('notifications').clearAll();

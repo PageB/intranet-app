@@ -5,39 +5,39 @@ import { computed } from '@ember/object';
 const { Model } = DS;
 
 export default Model.extend({
-  /**
-    @property firstName
-    @type String
+ /**
+  * @property firstName
+  * @type {String}
   */
   firstName: DS.attr('string'),
 
-  /**
-    @property lastName
-    @type String
+ /**
+  * @property lastName
+  * @type {String}
   */
   lastName: DS.attr('string'),
 
-  /**
-    @property password
-    @type String
+ /**
+  * @property password
+  * @type {String}
   */
   password: DS.attr('string'),
 
-  /**
-    @property createdAt
-    @type String
+ /**
+  * @property createdAt
+  * @type {String}
   */
   createdAt: DS.attr('string'),
 
-  /**
-    @property updatedAt
-    @type String
+ /**
+  * @property updatedAt
+  * @type {String}
   */
   updatedAt: DS.attr('string'),
 
-  /**
-    @property isNew
-    @type Boolean
+ /**
+  * @property isStarter
+  * @type {String}
   */
   isStarter: computed('createdAt', function () {
     const date = moment(this.get('createdAt'));
@@ -47,9 +47,9 @@ export default Model.extend({
     return days < 90 ? true : false;
   }),
 
-  /**
-    @property periodInCompany
-    @type String
+ /**
+  * @property periodInCompany
+  * @type {String}
   */
   periodInCompany: computed('createdAt', function () {
     const start = moment(this.get('createdAt'));
@@ -69,28 +69,28 @@ export default Model.extend({
     }
   }),
 
-  /**
-    @property birthday
-    @type String
+ /**
+  * @property birthday
+  * @type {String}
   */
   birthday: DS.attr('string'),
 
-  /**
-   @property isBirthday
-   @type Boolean
- */
+ /**
+  * @property isBirthday
+  * @type {String}
+  */
   isBirthday: computed('birthday', function () {
     const today = moment();
     const birth = moment(this.get('birthday'));
     const isBirthday = (today.month() === birth.month()) && (today.date() === birth.date());
-    
+
     return isBirthday;
   }),
 
-  /**
-   @property isBirthday
-   @type Boolean
- */
+ /**
+  * @property hasBirthday
+  * @type {String}
+  */
   hasBirthday: computed('birthday', function () {
     const birthDate = moment(this.get('birthday'));
     const matrix = [
@@ -113,94 +113,94 @@ export default Model.extend({
     return hasBirthday;
   }),
 
-  /**
-    @property image
-    @type String
+ /**
+  * @property image
+  * @type {String}
   */
   image: DS.attr('string'),
 
-  /**
-    @property image
-    @type String
+ /**
+  * @property photo
+  * @type {String}
   */
   photo: DS.attr('string'),
 
-  /**
-    @property avatar
-    @type String
+ /**
+  * @property avatar
+  * @type {String}
   */
   avatar: DS.attr('string'),
 
-  /**
-    @property education
-    @type String
+ /**
+  * @property education
+  * @type {String}
   */
   education: DS.attr('string'),
 
-  /**
-    @property expertise
-    @type String
+ /**
+  * @property expertise
+  * @type {String}
   */
   expertise: DS.attr('string'),
 
-  /**
-    @property skills
-    @type String
+ /**
+  * @property skills
+  * @type {String}
   */
   skills: DS.attr('string'),
 
-  /**
-    @property languages
-    @type String
+ /**
+  * @property languages
+  * @type {String}
   */
   languages: DS.attr('string'),
 
-  /**
-    @property hobbies
-    @type String
+ /**
+  * @property hobbies
+  * @type {String}
   */
   hobbies: DS.attr('string'),
 
-  /**
-    @property song
-    @type String
+ /**
+  * @property song
+  * @type {String}
   */
   song: DS.attr('string'),
 
-  /**
-    @property thought
-    @type string
+ /**
+  * @property thought
+  * @type {String}
   */
   thought: DS.attr('string'),
 
-  /**
-    @property book
-    @type string
+ /**
+  * @property book
+  * @type {String}
   */
   book: DS.attr('string'),
 
-  /**
-    @property pet
-    @type string
+ /**
+  * @property pet
+  * @type {String}
   */
   pet: DS.attr('string'),
 
-  /**
-    @property skype
-    @type string
+ /**
+  * @property skype
+  * @type {String}
   */
   skype: DS.attr('string'),
 
-  /**
-    @property email
-    @type string
+ /**
+  * @property email
+  * @type {String}
   */
   email: DS.attr('string'),
 
-  //   /**
-  //    @property position
-  //    @type DS.PromiseObject
-  //  */
+  // /**
+  //   * @property periodInCompany
+  //   * @type {String}
+  //   */
   // position: DS.belongsTo('position'),
 
   // /**
