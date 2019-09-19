@@ -38,20 +38,23 @@ export default Controller.extend(NotifyUser, ErrorHandler, {
      * @param {Object} employee
      */
     updateEmployee(employee) {
-      this.get('spinnerService').showSpinner();
-
-      employee.save()
-      .then(() => {
-        this.notifyUser('The employee has been successfully updated.', "success");
-        this.set('employee', null);
-      })
-      .catch((error) => {
-        this.handleErrors(error);
-        this.set('employee', null);
-      })
-      .finally(() => {
-        this.get('spinnerService').hideSpinner();
-      });
+      if (employee.hasDirtyAttributes) {
+        this.get('spinnerService').showSpinner();
+        employee.save()
+        .then(() => {
+          this.notifyUser('The employee has been successfully updated.', "success");
+          this.set('employee', null);
+        })
+        .catch((error) => {
+          this.handleErrors(error);
+          this.set('employee', null);
+        })
+        .finally(() => {
+          this.get('spinnerService').hideSpinner();
+        });
+      } else {
+        this.notifyUser('Save is aborted, user has not been updated.', "warning");
+      }
     },
 
     /**

@@ -5,10 +5,17 @@ export default Component.extend({
 
   classNames: ['admin-form'],
 
+  // TODO: Add doc block.
   data: null,
 
+  // TODO: Add doc block.
   isCreateForm: true,
 
+  /**
+   * Init component hook
+   *
+   * @method init
+   */
   init() {
     this._super(...arguments);
 
@@ -18,7 +25,7 @@ export default Component.extend({
   },
 
   actions: {
-    /** 
+    /**
      * TODO: Call route action and navigate to employee.
      *
      * @method createEmployee
@@ -26,6 +33,16 @@ export default Component.extend({
      */
     sendFormData() {
       this.getData(this.get('data'));
+    },
+
+    /**
+     * Update date and set birthday date.
+     *
+     * @method updateBirthday
+     * @param {String} value
+     */
+    updateBirthday(value) {
+      this.set('data.birthday', value);
     }
   }
 });

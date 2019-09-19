@@ -3,16 +3,19 @@ import Component from '@ember/component';
 export default Component.extend({
   tagName: '',
 
+  // TODO: Add doc block.
   viewFormIsVisible: false,
 
+  // TODO: Add doc block.
   editFormIsVisible: false,
 
+  // TODO: Add doc block.
   hideAllForms() {
     this.set('editFormIsVisible', false);
   },
-  
+
   actions: {
-    /** 
+    /**
      * TODO: Call route action and navigate to employee.
      *
      * @method showEditForm
@@ -21,7 +24,7 @@ export default Component.extend({
       this.set('editFormIsVisible', true);
     },
 
-    /** 
+    /**
      * TODO: Call route action and navigate to employee.
      *
      * @method deleteEmployee
@@ -32,7 +35,7 @@ export default Component.extend({
       this.delete(employee);
     },
 
-    /** 
+    /**
      * TODO: Call route action and navigate to employee.
      *
      * @method updateEmployee
@@ -51,7 +54,7 @@ export default Component.extend({
     confirmEmployeeDelete() {
       this.set('showModal', true);
     },
-  
+
     /**
      *  Close modal dialog.
      *
