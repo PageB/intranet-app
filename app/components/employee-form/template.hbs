@@ -19,7 +19,7 @@
   </div>
   <div class="admin-form__edit-row">
     <label for="birthday" class="admin-form__edit-label">Birthday:</label>
-    <input class="admin-form__view-input" id="birthday" type="text" value={{data.birthday}} onChange={{action (mut data.birthday) value="target.value"}}>
+    {{pikaday-input class="admin-form__view-input" format="MM/DD/YYYY" value=data.birthday onSelection=(action "updateBirthday")}}
   </div>
   <div class="admin-form__edit-row">
     <label for="education" class="admin-form__edit-label">Education:</label>
